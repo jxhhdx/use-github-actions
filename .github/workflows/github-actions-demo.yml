@@ -1,6 +1,6 @@
 name: Github Actions Demo
 on: [push]
-jebs: 
+jobs: 
   Check-Github-Actions:
     run-on: ubuntu-lastest
     steps: 
