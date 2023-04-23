@@ -6,7 +6,7 @@ jobs:
     steps: 
       - uses: actions/checkout@v3.5.2
         with:
-          repository: 'gitee.com/devui/vue-devui.git'
+          repository: 'DevCloudFE/vue-devui'
       - name: 当前仓库列表文件
         run: ls ${{ github.workspace }}
       - uses: actions/setup-node@v2
