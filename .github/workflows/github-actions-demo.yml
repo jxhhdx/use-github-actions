@@ -4,16 +4,10 @@ jobs:
   Check-Github-Actions:
     runs-on: ubuntu-latest
     steps: 
-      - uses: actions/checkout@v3.5.2
-        with:
-          repository: 'DevCloudFE/vue-devui'
-      - name: 当前仓库列表文件
-        run: ls ${{ github.workspace }}
-      - uses: actions/setup-node@v2
-        with: 
-          node-version: '16'
-      - run: node -v
-      - run: npm i -g typescript
-      - run: tsc -v
-      - run: echo '${{ secrets.MY_HOST }}' >> hello.txt
-      - run: cat hello.txt
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: whoami
