@@ -15,5 +15,5 @@ jobs:
       - run: node -v
       - run: npm i -g typescript
       - run: tsc -v
-      - run: echo '${{ secrets.MY_HOST }}' hello.txt
+      - run: echo '${{ secrets.MY_HOST }}' >> hello.txt
       - run: cat hello.txt
