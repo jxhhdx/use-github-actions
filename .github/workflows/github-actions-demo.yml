@@ -13,4 +13,8 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: whoami
+        script: |
+          pwd
+          ls -l
+          touch hello.txt
+          echo '${{ secrets.MY_HOST }}'
