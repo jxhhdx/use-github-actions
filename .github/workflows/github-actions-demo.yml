@@ -4,9 +4,9 @@ jobs:
   Check-Github-Actions:
     runs-on: ubuntu-latest
     steps: 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.5.2
         with:
-          repository: 'https://gitee.com/devui/vue-devui.git'
+          repository: 'gitee.com/devui/vue-devui.git'
       - name: 当前仓库列表文件
         run: ls ${{ github.workspace }}
       - uses: actions/setup-node@v2
