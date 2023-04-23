@@ -6,7 +6,7 @@ jobs:
     steps: 
       - uses: actions/checkout@v2
         with:
-          repository: 'vikingute/lego-bricks'
+          repository: 'https://gitee.com/devui/vue-devui.git'
       - name: 当前仓库列表文件
         run: ls ${{ github.workspace }}
       - uses: actions/setup-node@v2
