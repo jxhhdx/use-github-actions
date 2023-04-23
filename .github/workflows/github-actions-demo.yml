@@ -17,4 +17,4 @@ jobs:
           pwd
           ls -l
           touch baby.txt
-          echo '${{ secrets.MY_HOST }}' >> baby.txt
+          echo '我的IP地址: ${{ secrets.HOST }}' >> baby.txt
