@@ -1,9 +1,12 @@
-name: Github Actions Demo
+name: remote ssh command
 on: [push]
-jobs: 
-  Check-Github-Actions:
+jobs:
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
-    steps: 
+    steps:
+    - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v0.1.10
       with:
         host: ${{ secrets.HOST }}
