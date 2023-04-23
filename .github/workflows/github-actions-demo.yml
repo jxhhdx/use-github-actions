@@ -16,5 +16,5 @@ jobs:
         script: |
           pwd
           ls -l
-          touch hello.txt
-          echo '${{ secrets.MY_HOST }}'
+          touch baby.txt
+          echo '${{ secrets.MY_HOST }}' >> baby.txt
